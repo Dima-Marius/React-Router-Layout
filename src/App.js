@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Home from './routes/Home/Home';
+import { Route, Routes } from 'react-router-dom';
+import SecondPage from './routes/SecondPage/SecondPage';
+import ThirdPage from './routes/ThirdPage/ThirdPage';
+import Navbar from './components/Navbar/Navbar';
+import ItemsPage from './routes/ItemsPage/ItemsPage';
+import NotFound from './routes/NotFound/NotFound';
+import ItemsPageRoutes from './routes/ItemsPage/ItemsPageRoutes/ItemsPageRoutes';
+import ItemsPageNoMenu from './routes/ItemsPageNoMenu/ItemsPageNoMenu.jsx'
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+    <Navbar />
+     <Routes>
+       <Route path='/' element={<Home/>} />
+       <Route path='*' element={<NotFound/>} />
+       <Route path='/SecondPage' element={<SecondPage/>} />
+       <Route path='/ThirdPage' element={<ThirdPage/>} />
+       <Route path='/ItemsPageWithoutMenu'>
+          <Route index element={<ItemsPageNoMenu/>}/>
+          <Route path='*' element={<ItemsPageRoutes/>}/>
+       </Route>
+       <Route path='/ItemsPage' element={<ItemsPage/>}>
+          <Route path='*' element={<ItemsPageRoutes/>}/>
+       </Route>  
+
+      </Routes>
+    </React.Fragment>
   );
 }
 
