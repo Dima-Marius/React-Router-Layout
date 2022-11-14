@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import ContextSettings from '../../components/ContextSettings/ContextSettings';
 import PageContent from '../../components/PageContent/PageContent';
 import style from './thirdPage.module.css'
 
@@ -12,6 +13,7 @@ function ThirdPage() {
   return (
     <div className={style.thirdPage}>
         <PageContent pageName={pageName}/>
+        <ContextSettings/>
     </div>
   )
 }

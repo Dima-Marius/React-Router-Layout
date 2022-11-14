@@ -3,6 +3,7 @@ import style from './itemsPageNoMenu.module.css';
 import { Link,Outlet } from 'react-router-dom';
 
 function ItemsPage() {
+
   return (
     <React.Fragment>
     <div className={style.pagetitle}>

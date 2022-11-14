@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import ContextSettings from '../../components/ContextSettings/ContextSettings';
 import PageContent from '../../components/PageContent/PageContent';
 import style from './SecondPage.module.css'
 
@@ -12,6 +13,7 @@ function SecondPage() {
   return (
     <div className={style.secondPage}>
         <PageContent pageName={pageName} />
+        <ContextSettings/>
     </div>
   )
 }

@@ -25,6 +25,10 @@
     background-color: lightblue;
 }
 
+.navbar ul li.theme:hover {
+    background-Color:rgb(184, 127, 184);
+}
+
 .navbar ul a {
     height: 100%;
     text-decoration: none;

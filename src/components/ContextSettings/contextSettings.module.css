@@ -1,0 +1,19 @@
+.ctx-btn {
+    align-self: center;
+    width: 140px;
+    height: 24px;
+    font-weight: bold;
+    color:black;
+    font-size: 15px;
+}
+
+.container {
+    font-size: 25px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.container > p:not(:first-child) {
+    margin-bottom:20px;
+}

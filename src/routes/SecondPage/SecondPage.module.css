@@ -4,4 +4,6 @@
     display:flex;
     background-color: peachpuff;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

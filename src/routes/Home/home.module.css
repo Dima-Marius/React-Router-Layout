@@ -3,7 +3,11 @@
     height: 100%;
     display:flex;
     background-color: peachpuff;
-    display:flex;
     flex-direction: column;
-    
+    justify-content: center;
+    align-items: center;
+}
+
+.home > p {
+    text-align: center;
 }
